@@ -1,0 +1,41 @@
+---
+import Header from "../components/Header.astro"
+import Footer from "../components/Footer.astro"
+const { frontmatter } = Astro.props;
+import '@fontsource-variable/noto-sans-tc';
+
+const {pageTitle} = Astro.props
+---
+<html lang="nl" class="scroll-smooth">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{pageTitle}</title>
+  </head>
+  <body class="bg-black">
+    <Header />
+    <div class="max-w-screen-xl mx-auto text-white">
+      <div class="py-4 w-full md:py-20 md:w-3/5">
+        <div class="h-4 lg:h-20"></div>
+        <h1 class="text-xl uppercase font-bold">{frontmatter.title}</h1>
+        <slot />
+
+        <div class="h-4 lg:h-20"></div>
+
+        <a href="/programs" class="my-4 block bg-white px-3.5 py-2.5 text-center text-sm font-semibold text-black hover:text-white hover:border-white border-2 uppercase shadow-sm hover:bg-black focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 ">Terug naar het overzicht</a>
+
+        <div class="h-4 lg:h-20"></div>
+      </div>
+    </div>
+    <Footer />
+    <script src="../lib/js/flowbite.min.js" />
+  </body>
+</html>
+
+<style>
+html {
+    font-family: 'Noto Sans TC Variable', sans-serif;
+  }
+</style>

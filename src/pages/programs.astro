@@ -1,0 +1,19 @@
+---
+import Layout from "../layouts/Layout.astro"
+const allPrograms = await Astro.glob('../pages/programs/*.md');
+const pageTitle = "Uurrooster"
+---
+
+<Layout>
+	<div class="bg-black py-12">
+        <h1 class="text-center text-white uppercase font-semibold text-5xl">Programs</h1>
+    </div>
+    <div class="max-w-screen-xl mx-auto bg-black text-white mb-10">
+        <ul>        
+            {allPrograms.map((program) => <li><a href={program.url}>{program.frontmatter.title}</a></li>)}
+        </ul>
+
+
+    </div>
+	
+</Layout>
