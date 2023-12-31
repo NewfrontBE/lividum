@@ -5,6 +5,9 @@ import { getImage } from "astro:assets"
 import heroImage from "../lib/img/home-hero-bg.jpg"
 const optimizedHeroImage = await getImage({ src: heroImage })
 
+import lividumHeroImage from "../lib/img/lividum-gym-hero.jpg"
+const optimizedLividumHeroImage = await getImage({ src: lividumHeroImage })
+
 import woodImage from "../lib/img/wood-bg.jpg"
 const optimizedWoodImage = await getImage({ src: woodImage })
 
@@ -33,7 +36,7 @@ import { SEO } from "astro-seo";
   </head>
 
 <Layout>
-	<section style={`background-image: url('${optimizedHeroImage.src}')`} class="pt-48 pb-48 px-4 -mt-24 grid justify-items-center">
+	<section style={`background-image: url('${optimizedLividumHeroImage.src}')`} class="pt-48 pb-48 px-4 -mt-24 grid justify-items-center">
 		<div class="wrapper md:w-3/5">
 			<h2 class="text-white uppercase text-5xl font-extrabold text-center">Take the first step towards <span class="text-gray-300">a stronger, fitter you</span></h2>
 			<p class="text-white my-10 text-center">Vanaf dag één betrokken bij jouw ontwikkeling.</p>
