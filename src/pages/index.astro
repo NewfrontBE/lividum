@@ -9,8 +9,28 @@ import woodImage from "../lib/img/wood-bg.jpg"
 const optimizedWoodImage = await getImage({ src: woodImage })
 
 const pageTitle = "Lividum Fitness in Herentals"
+import { SEO } from "astro-seo";
 
 ---
+<html lang="nl" class="scroll-smooth">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{pageTitle}</title>
+    <SEO
+      title="Lividum Herentals - Je favoriete plaats voor allerlei workouts"
+      description="Klaar voor meer fitheid in 2024? Start nu bij Lividum met een gratis weekpas!"
+      openGraph={{
+        basic: {
+          title: "Lividum Herentals - Je favoriete plaats voor allerlei workouts",
+          type:"Website",
+          image: "https://user-images.githubusercontent.com/5182256/131216951-8f74f425-f775-463d-a11b-0e01ad9fce8d.png",
+        }
+      }}
+    />
+  </head>
 
 <Layout>
 	<section style={`background-image: url('${optimizedHeroImage.src}')`} class="pt-48 pb-48 px-4 -mt-24 grid justify-items-center">
@@ -18,8 +38,8 @@ const pageTitle = "Lividum Fitness in Herentals"
 			<h2 class="text-white uppercase text-5xl font-extrabold text-center">Take the first step towards <span class="text-gray-300">a stronger, fitter you</span></h2>
 			<p class="text-white my-10 text-center">Vanaf dag één betrokken bij jouw ontwikkeling.</p>
 			<div class="flex justify-center">
-				<a href="/programs" class="bg-white text-black py-2 px-4 mr-4 uppercase">Ons aanbod</a>
-				<a href="/#inschrijven" class="bg-black text-white py-2 px-4 uppercase">Doe mee</a>
+				<a href="/programs" class="bg-white text-black py-2 px-4 mr-4 uppercase font-bold">Ons aanbod</a>
+				<a href="/#inschrijven" class="bg-black text-white py-2 px-4 uppercase font-bold">Doe mee</a>
 			</div>
 		</div>
 	</section>
@@ -53,7 +73,7 @@ const pageTitle = "Lividum Fitness in Herentals"
 					</g>
 				</svg>
             	<h3 class="text-2xl italic">Groot aanbod</h3>
-            	<p class="mt-5 mb-10 normal-case">Cross training, boxing, bootcamps en veel meer</p>
+            	<p class="mt-5 mb-10 normal-case">Workouts, olympic weightlifting, bootcamps en meer</p>
             	<a href="/programs" class="flex justify-center"><span>Workout overzicht</span> 
 					<svg class="w-4 ml-2" viewBox="0 0 20 10" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;">
                         <g transform="matrix(1,0,0,1,-2,-7)">
@@ -132,14 +152,14 @@ const pageTitle = "Lividum Fitness in Herentals"
 	<!-- EINDE FORMULIER -->
 
 	<!-- START INSTAGRAM FEED -->
-	<!-- <section class="bg-white py-12">
-		<div class="container mx-auto">
+	<section class="bg-white py-12">
+		<div class="w-4/5 mx-auto px-4">
 			<p class="italic text-4xl text-center uppercase font-semibold">Geef het beste van jezelf</p>
 			<p class="text-4xl text-center uppercase font-extrabold mb-8">Samen met ons</p>
 			<figure data-behold-id="JIjQpuEh55CJ3jbjLmoR"></figure>
 			<script src="https://w.behold.so/widget.js" type="module"></script>
 		</div>
-	</section> -->
+	</section>
 	<!-- EINDE INSTAGRAM FEED -->
 	
 </Layout>

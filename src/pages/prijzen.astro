@@ -6,9 +6,27 @@ import { getImage } from "astro:assets"
 import woodImage from "../lib/img/wood-bg.jpg"
 const optimizedWoodImage = await getImage({ src: woodImage })
 
-const pageTitle = "Prijzen"
+import { SEO } from "astro-seo";
 ---
 
+<html lang="nl" class="scroll-smooth">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <SEO
+      title="Abonnementen en tarieven Lividum Herentals - Fitness"
+      description="We bieden zowel abonnementen aan als enkele sessies"
+      openGraph={{
+        basic: {
+          title: "Abonnementen en tarieven Lividum Herentals - Fitness",
+          type:"Website",
+          image: "https://user-images.githubusercontent.com/5182256/131216951-8f74f425-f775-463d-a11b-0e01ad9fce8d.png",
+        }
+      }}
+    />
+  </head>
 <Layout>
 	<div class="bg-black py-12">
         <h1 class="text-center text-white uppercase font-semibold text-5xl">Abonnementen</h1>

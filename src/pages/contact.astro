@@ -1,8 +1,27 @@
 ---
 import Layout from "../layouts/Layout.astro"
 
-const pageTitle = "Contact"
+import { SEO } from "astro-seo";
 ---
+
+<html lang="nl" class="scroll-smooth">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <SEO
+      title="Contacteer Lividum Herentals - Fitness in de Kempen"
+      description="Kan je niet wachten om samen met ons te trainen? Of heb je eerst nog enkele vragen?"
+      openGraph={{
+        basic: {
+          title: "Contacteer Lividum Herentals - Je favoriete plaats voor allerlei workouts",
+          type:"Website",
+          image: "https://user-images.githubusercontent.com/5182256/131216951-8f74f425-f775-463d-a11b-0e01ad9fce8d.png",
+        }
+      }}
+    />
+  </head>
 
 <Layout>
     
