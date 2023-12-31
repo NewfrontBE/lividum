@@ -1,0 +1,23 @@
+---
+import Layout from "../layouts/Layout.astro"
+const allPrograms = await Astro.glob('../pages/programs/*.md');
+---
+
+<html lang="nl" class="scroll-smooth">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <meta name="robots" content="noindex">
+    <meta name="robots" content="nosnippet"> 
+  </head>
+<Layout>
+	<div class="bg-black py-12">
+        <h1 class="text-center text-white uppercase font-semibold text-5xl">Bedankt!</h1>
+    </div>
+    <div class="max-w-screen-xl mx-auto bg-black text-white mb-10">
+        <p>Bedankt voor je bericht! We nemen zo snel mogelijk contact met je op.</p>
+    </div>
+	
+</Layout>
